@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
+import TextField from '@material-ui/core/TextField';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      regField: '',
 
-export default App;
+    }
+  }
+  handleChange = () => {
+    alert('asas')
+  }
+render(){
+  return (
+    <div className='SPA__Motiv'>
+      <form className='registration_form' noValidate autoComplete="off">
+        <TextField
+          id="outlined-name"
+          label="Телефон"
+          className='registration_form__field'
+          value={this.state.regField}
+          onChange={(value) => this.handleChange(value)}
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          id="outlined-name"
+          label="Пароль"
+          className='registration_form__field'
+          value={this.state.regField}
+          onChange={(value) => this.handleChange(value)}
+          margin="normal"
+          variant="outlined"
+        />
+      </form>
+    </div>
+)}
+}
+  
