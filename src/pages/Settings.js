@@ -28,19 +28,21 @@ render(){
   return (
     <div className = 'wrap'>
       <Grid container 
-      alignContent={'space-between'} data-wow-delay="0.5s">
+      alignContent={'space-between'}>
         <Grid classNan  item xs={2} onClick={() => {this.props.clickHandler('authForm')}}
         className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s" >
           <Paper 
             className='settings_for_item_paper'
+            id={0}
             elevation={5}
             square={false}
+            onMouseUp={(id)=>{console.log(id)}}
           >
           <div className="text">
-            Личный данные
+            Личные данные
           </div>
           <div className="icon">
-            <i class="fas fa-user-circle"></i>
+            <i class="fas fa-user-circle" ></i>
           </div>
           </Paper>
         </Grid>
@@ -55,7 +57,7 @@ render(){
             Смена пароля
           </div>
           <div className="icon">
-            <i class="fas fa-cog"></i>
+            <i class="fas fa-cog" ></i>
           </div>
           </Paper>
         </Grid>
