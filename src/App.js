@@ -1,14 +1,16 @@
 import React from 'react';
 import './css/App.css';
 // import Axios from 'axios';
-import Main from './pages/Main'
-import Settings from './pages/Settings'
-import AuthForm from './pages/AuthForm'
+import Main from './pages/Main';
+import Settings from './pages/Settings';
+import AuthForm from './pages/AuthForm';
+import NavigationPanel from './components/NavigationPanel'
+
 export default class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      page: 'settings',
+      page: 'main',
       regField: '',
     }
   }
@@ -20,11 +22,16 @@ export default class App extends React.Component{
       page: name
     })
   }
+  handleClickMenuBar = (event, value) => {
+    this.setState({page: value})
+    console.log(value);
+    
+  }
 render(){
   let content;
   switch(this.state.page) {
     case 'main':
-      content =  <Main/>;  
+      content =  <AuthForm/>;  
       break;
     case 'settings':
       content =  <Settings clickHandler={this.onClickButton}/>;
@@ -37,6 +44,7 @@ render(){
   }
   return (
     <div className='SPA__Motiv'>
+      <NavigationPanel handleClickMenuBar={this.handleClickMenuBar} menuValue={this.state.page}/>
       {content}
     </div>
 )}

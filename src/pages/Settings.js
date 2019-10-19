@@ -1,7 +1,5 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
-import CustomButton from '../components/button';
 import '../css/settings_form.css';
 import Grid from '@material-ui/core/Grid';
 // import Axios from 'axios';
@@ -27,7 +25,8 @@ render(){
   return (
     <div className = 'wrap'>
       <Grid container 
-      alignContent={'space-between'}>
+            alignContent={'space-between'}
+      >
         <Grid item xs={2} onClick={() => {this.props.clickHandler('authForm')}}>
           <Paper 
             className='settings_for_item'
@@ -38,7 +37,7 @@ render(){
             Личный данные
           </div>
           <div className="icon">
-          <i class="fas fa-user-circle"></i>
+          <i className="fas fa-user-circle"></i>
           </div>
           </Paper>
         </Grid>
