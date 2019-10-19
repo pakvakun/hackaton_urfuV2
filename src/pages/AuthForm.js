@@ -25,6 +25,7 @@ export default class AuthForm extends React.Component{
       login: this.state.login,
       password: this.state.password
     };
+    this.props.loginUser(this.state.login)
     axios.post('http://172.20.10.2/api/auth/', data )
       .then(res => {
         console.log(res)

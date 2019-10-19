@@ -8,13 +8,18 @@ import ChangePassword from './pages/ChangePassword';
 import NavigationPanel from './components/NavigationPanel'
 export default class App extends React.Component{
   constructor(props){
-    console.log(props)
     super(props);
     this.state = {
       page: 'main',
       regField: '',
-      isAuth: false
+      isAuth: false,
+      login: ''
     }
+  }
+  loginUser = (login) =>{
+    this.setState({
+      login: login
+    })
   }
   handleChange = (new_isAuth) => {
     this.setState({
@@ -52,7 +57,7 @@ render(){
       // content =  <AuthForm/>;
       // break;
     case 'ChangePassword':
-      content =  <ChangePassword/>;
+      content =  <ChangePassword login={this.state.login} clickHandler={this.onClickButton}/>;
       break;
     // default: content = <AuthForm handleChange = {this.handleChange}/>;
     //   break;
@@ -66,7 +71,7 @@ render(){
               <NavigationPanel handleClickMenuBar={this.handleClickMenuBar} menuValue={this.state.page}/>
               {content}
             </>
-        :   <AuthForm handleChange = {this.handleChange}/>
+        :   <AuthForm handleChange = {this.handleChange} loginUser={this.loginUser}/>
       }
     </div>
     
