@@ -13,12 +13,12 @@ export default class AuthForm extends React.Component{
 
     }
   }
-  handleChange = () => {
+  handleChangeInput = () => {
     alert('asas')
   }
-  onClickButton = () => {
-    
-  }
+  // onClickButton = (val) => {
+  //   console.log(val)
+  // }
   componentDidMount(){
     
   }
@@ -34,17 +34,17 @@ render(){
               label='Телефон' 
               class='registration_form__field' 
               val={this.state.regField} 
-              handleChange={this.handleChange} 
+              handleChange={this.handleChangeButton} 
           />
           <CustomTextField 
               label='Пароль' 
               class='registration_form__field' 
               val={this.state.regField} 
-              handleChange={this.handleChange} 
+              handleChange={this.handleChangeButton} 
           />
           <div className='btn-group'>
-            <CustomButton className='button' buttonVal='Войти' onClickBtn={this.onClickButton}/>
-            <CustomButton className='button' buttonVal='Получить Пароль' onClickBtn={this.onClickButton}/>
+            <CustomButton className='button' buttonVal='Войти' onClickBtn={this.props.onClickButton} targetPage='main'/>
+            <CustomButton className='button' buttonVal='Получить Пароль' onClickBtn={this.props.onClickButton} targetPage='getPass'/>
           </div>
         </form>
       </Paper>

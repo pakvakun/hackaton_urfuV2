@@ -22,6 +22,13 @@ export default class App extends React.Component{
       page: name
     })
   }
+  authentificate = (value) => {
+    // Axios({
+    //   method: 'POST',
+    //   url: 
+    // })
+    this.setState({page: value, isAuth: true})
+  }
   handleClickMenuBar = (event, value) => {
     this.setState({page: value})
     console.log(value);
@@ -30,15 +37,15 @@ export default class App extends React.Component{
 render(){
   let content;
   switch(this.state.page) {
-    case 'main':
-      content =  <AuthForm/>;  
-      break;
+    // case 'main':
+      // content =  <Main/>;  
+      // break;
     case 'settings':
       content =  <Settings clickHandler={this.onClickButton}/>;
       break;
-    case 'authForm':
-      content =  <AuthForm/>;
-      break;
+    // case 'authForm':
+      // content =  <AuthForm/>;
+      // break;
     case 'ChangePassword':
       content =  <ChangePassword/>;
       break;
@@ -46,14 +53,14 @@ render(){
       break;
   }
   return (
-    <div className='SPA__Motiv' style={{paddingTop: this.state.isAuth ? '80px' : 0}}>
+    <div className='SPA__Motiv' style={{paddingTop: this.state.isAuth ? 80 : 0}}>
       {
         this.state.isAuth
         ?   <>
               <NavigationPanel handleClickMenuBar={this.handleClickMenuBar} menuValue={this.state.page}/>
               {content}
             </>
-        :   <AuthForm />
+        :   <AuthForm onClickButton={this.authentificate}/>
       }
     </div>
     
