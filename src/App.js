@@ -8,46 +8,30 @@ export default class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
+      page: 'authForm',
       regField: '',
-
     }
   }
   handleChange = () => {
     alert('asas')
   }
-  onClickButton = () => {
-    alert('button clicjed')
+  onClickButton = (name) => {
+    this.setState({
+      page: name
+    })
   }
 render(){
+  let content = switch(this.state.page) {
+    case 'main':
+      return <Main />;  
+    case 'settings':
+      return <Settings/>;
+    case 'authForm':
+      return <AuthForm/>;
+  }
   return (
     <div className='SPA__Motiv'>
-      <Paper 
-        className='registration_form'
-        elevation={5}
-        square={false}
-      >
-      <form  noValidate autoComplete="off">
-        <TextField
-          id="outlined-name"
-          label="Телефон"
-          className='registration_form__field'
-          value={this.state.regField}
-          onChange={(value) => this.handleChange(value)}
-          margin="normal"
-          variant="outlined"
-        />
-        <TextField
-          id="outlined-name"
-          label="Пароль"
-          className='registration_form__field'
-          value={this.state.regField}
-          onChange={(value) => this.handleChange(value)}
-          margin="normal"
-          variant="outlined"
-        />
-        <Button buttonVal='Войти' onClickBtn={this.onClickButton}/>
-      </form>
-      </Paper>
+      
     </div>
 )}
 }
