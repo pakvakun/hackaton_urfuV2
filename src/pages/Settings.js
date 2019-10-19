@@ -26,15 +26,9 @@ render(){
   return (
     <div className = 'wrap'>
       <Grid container 
-<<<<<<< HEAD
-            alignContent={'space-between'}
-      >
-        <Grid item xs={2} onClick={() => {this.props.clickHandler('authForm')}}>
-=======
       alignContent={'space-between'}>
         <Grid classNan  item xs={2} onClick={() => {this.props.clickHandler('authForm')}}
         className='settings_for_item fadeInRight wow' data-wow-duration="2s" data-wow-delay="0s">
->>>>>>> fac32dd10b3f201b8fed4534c6e9f583a43a98fd
           <Paper 
             className='settings_for_item_paper'
             elevation={5}
@@ -44,11 +38,7 @@ render(){
             Личный данные
           </div>
           <div className="icon">
-<<<<<<< HEAD
-          <i className="fas fa-user-circle"></i>
-=======
             <i class="fas fa-user-circle"></i>
->>>>>>> fac32dd10b3f201b8fed4534c6e9f583a43a98fd
           </div>
           </Paper>
         </Grid>

@@ -1,18 +1,11 @@
 import React from 'react';
 import './css/App.css';
 // import Axios from 'axios';
-<<<<<<< HEAD
 import Main from './pages/Main';
 import Settings from './pages/Settings';
 import AuthForm from './pages/AuthForm';
 import NavigationPanel from './components/NavigationPanel'
 
-=======
-import Main from './pages/Main'
-import Settings from './pages/Settings'
-import ChangePassword from './pages/ChangePassword'
-import AuthForm from './pages/AuthForm'
->>>>>>> fac32dd10b3f201b8fed4534c6e9f583a43a98fd
 export default class App extends React.Component{
   constructor(props){
     super(props);
