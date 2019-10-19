@@ -4,6 +4,7 @@ import './css/App.css';
 import Main from './pages/Main';
 import Settings from './pages/Settings';
 import AuthForm from './pages/AuthForm';
+import ChangePassword from './pages/ChangePassword';
 import NavigationPanel from './components/NavigationPanel'
 
 export default class App extends React.Component{
