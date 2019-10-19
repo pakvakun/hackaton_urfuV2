@@ -5,7 +5,7 @@ import Main from './pages/Main';
 import Settings from './pages/Settings';
 import AuthForm from './pages/AuthForm';
 import NavigationPanel from './components/NavigationPanel'
-
+import ChangePassword from './pages/ChangePassword'
 export default class App extends React.Component{
   constructor(props){
     super(props);

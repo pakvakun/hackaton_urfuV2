@@ -4,7 +4,9 @@ import '../css/settings_form.css';
 import Grid from '@material-ui/core/Grid';
 // import Axios from 'axios';
 import  WOW from '../WOW'
+
 new WOW().init();
+
 export default class Settings extends React.Component{
   constructor(props){
     super(props);
@@ -28,7 +30,7 @@ render(){
       <Grid container 
       alignContent={'space-between'}>
         <Grid classNan  item xs={2} onClick={() => {this.props.clickHandler('authForm')}}
-        className='settings_for_item fadeInRight wow' data-wow-duration="2s" data-wow-delay="0s">
+        className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s">
           <Paper 
             className='settings_for_item_paper'
             elevation={5}
@@ -43,7 +45,7 @@ render(){
           </Paper>
         </Grid>
         <Grid classNan item xs={2} onClick={() => {this.props.clickHandler('Change_Password')}}
-        className='settings_for_item fadeInRight wow'data-wow-duration="2s" data-wow-delay="0.5s">
+        className='settings_for_item fadeInRight wow'data-wow-duration="1s" data-wow-delay="0.3s">
           <Paper 
             className='settings_for_item_paper'
             elevation={5}
@@ -58,7 +60,7 @@ render(){
           </Paper>
         </Grid>
         <Grid item xs={2} onClick={() => {this.props.clickHandler('authForm')}}
-        className='settings_for_item fadeInRight wow' data-wow-duration="2s" data-wow-delay="1s">
+        className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0.6s">
           <Paper 
             className='settings_for_item_paper'
             elevation={5}
