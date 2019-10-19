@@ -8,14 +8,18 @@ import ChangePassword from './pages/ChangePassword';
 import NavigationPanel from './components/NavigationPanel'
 export default class App extends React.Component{
   constructor(props){
+    console.log(props)
     super(props);
     this.state = {
       page: 'main',
       regField: '',
+      isAuth: false
     }
   }
-  handleChange = () => {
-    alert('asas')
+  handleChange = (new_isAuth) => {
+    this.setState({
+      isAuth: new_isAuth
+    })
   }
   onClickButton = (name) => {
     this.setState({
@@ -28,32 +32,34 @@ export default class App extends React.Component{
     
   }
 render(){
+  
   let content;
   switch(this.state.page) {
     case 'main':
-      content =  <AuthForm/>;  
+      content =  <AuthForm />;  
       break;
     case 'settings':
       content =  <Settings clickHandler={this.onClickButton}/>;
       break;
-    case 'authForm':
-      content =  <AuthForm/>;
-      break;
+    // case 'authForm':
+    //   content =  <AuthForm  handleChange = {this.handleChange}/>;
+    //   break;
     case 'ChangePassword':
       content =  <ChangePassword/>;
       break;
-    default: content = <AuthForm />;
-      break;
+    // default: content = <AuthForm handleChange = {this.handleChange}/>;
+    //   break;
   }
   return (
     <div className='SPA__Motiv' style={{paddingTop: this.state.isAuth ? '80px' : 0}}>
       {
         this.state.isAuth
+        // true
         ?   <>
               <NavigationPanel handleClickMenuBar={this.handleClickMenuBar} menuValue={this.state.page}/>
               {content}
             </>
-        :   <AuthForm />
+        :   <AuthForm handleChange = {this.handleChange}/>
       }
     </div>
     

@@ -28,9 +28,9 @@ render(){
   return (
     <div className = 'wrap'>
       <Grid container 
-      alignContent={'space-between'}>
+      alignContent={'space-between'} data-wow-delay="0.5s">
         <Grid classNan  item xs={2} onClick={() => {this.props.clickHandler('authForm')}}
-        className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s">
+        className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s" >
           <Paper 
             className='settings_for_item_paper'
             elevation={5}

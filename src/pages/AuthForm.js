@@ -7,6 +7,7 @@ import axios from 'axios';
 
 export default class AuthForm extends React.Component{
   constructor(props){
+    console.log(props);
     super(props);
     this.state = {
       regField: '',
@@ -26,7 +27,10 @@ export default class AuthForm extends React.Component{
     };
     axios.post('http://172.20.10.2/api/auth/', data )
       .then(res => {
-        console.log(res);
+        console.log(res)
+        if (res.data.type == 'success'){
+          this.props.handleChange(true)
+        }
       })
   }
 
