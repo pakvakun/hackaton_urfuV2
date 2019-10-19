@@ -2,6 +2,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import CustomButton from '../components/button';
+import CustomTextField from '../components/textField';
 import '../css/auth-form.css';
 import Axios from 'axios';
 
@@ -30,23 +31,17 @@ render(){
         square={false}
       >
       <form  noValidate autoComplete="off">
-        <TextField
-          id="outlined-name"
-          label="Телефон"
-          className='registration_form__field'
-          value={this.state.regField}
-          onChange={(value) => this.handleChange(value)}
-          margin="normal"
-          variant="outlined"
+        <CustomTextField 
+            label='Телефон' 
+            class='registration_form__field' 
+            val={this.state.regField} 
+            handleChange={this.handleChange} 
         />
-        <TextField
-          id="outlined-name"
-          label="Пароль"
-          className='registration_form__field'
-          value={this.state.regField}
-          onChange={(value) => this.handleChange(value)}
-          margin="normal"
-          variant="outlined"
+        <CustomTextField 
+            label='Пароль' 
+            class='registration_form__field' 
+            val={this.state.regField} 
+            handleChange={this.handleChange} 
         />
         <CustomButton buttonVal='Войти' onClickBtn={this.onClickButton}/>
       </form>
