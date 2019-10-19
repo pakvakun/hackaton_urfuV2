@@ -6,7 +6,6 @@ import Settings from './pages/Settings';
 import AuthForm from './pages/AuthForm';
 import ChangePassword from './pages/ChangePassword';
 import NavigationPanel from './components/NavigationPanel'
-
 export default class App extends React.Component{
   constructor(props){
     super(props);
@@ -47,10 +46,17 @@ render(){
       break;
   }
   return (
-    <div className='SPA__Motiv'>
-      <NavigationPanel handleClickMenuBar={this.handleClickMenuBar} menuValue={this.state.page}/>
-      {content}
+    <div className='SPA__Motiv' style={{paddingTop: this.state.isAuth ? '80px' : 0}}>
+      {
+        this.state.isAuth
+        ?   <>
+              <NavigationPanel handleClickMenuBar={this.handleClickMenuBar} menuValue={this.state.page}/>
+              {content}
+            </>
+        :   <AuthForm />
+      }
     </div>
+    
 )}
 }
   

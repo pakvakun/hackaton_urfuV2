@@ -2,8 +2,8 @@ import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import SettingsIcon from '@material-ui/icons/Settings';
 import PhoneIcon from '@material-ui/icons/Phone';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
 import '../css/NavigationPanel.css';
 
@@ -27,9 +27,9 @@ render(){
         action={(data) => this.data = data }
       >
         <Tab icon={<PhoneIcon />} label="Главная" value={'main'}/>
-        <Tab icon={<FavoriteIcon />} label="Настройки" value={'settings'}/>
-        <Tab icon={<PersonPinIcon />} label="Войти" value={'authForm'}/>
-        <Tab icon={<PersonPinIcon />} label="Изменить пароль" value={'ChangePassword'}/>
+        <Tab icon={<SettingsIcon />} label="Настройки" value={'settings'}/>
+        {/* <Tab icon={<PersonPinIcon />} label="Войти" value={'authForm'}/> */}
+        {/* <Tab icon={<PersonPinIcon />} label="Изменить пароль" value={'ChangePassword'}/> */}
       </Tabs>
     </Paper>
 )}

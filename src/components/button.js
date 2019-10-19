@@ -14,7 +14,7 @@ export default class CustomButton extends React.Component{
 
 render(){
   return (
-    <Button variant="contained" className={'button'} onClick={this.props.onClickBtn}>
+    <Button variant="contained" className='button' onClick={this.props.onClickBtn}>
         {this.props.buttonVal}
     </Button>
 )}
