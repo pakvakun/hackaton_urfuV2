@@ -22,11 +22,13 @@ export default class AuthForm extends React.Component{
 render(){
   return (
     <TextField
+        type = {this.props.type ? this.props.type : ''}
         id="outlined-name"
         label={this.props.label}
         className={this.props.class}
         value={this.props.val}
-        onChange={(value) => this.props.handleChange(value)}
+        onChange={(event) => this.props.handleChange(this.props.name,event.currentTarget.value)}
+        name = {this.props.name}
         margin="normal"
         variant="outlined"
     />
