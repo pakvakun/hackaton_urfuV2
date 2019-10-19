@@ -1,7 +1,9 @@
 import React from 'react';
 import './css/App.css';
 import Axios from 'axios';
-
+import Main from './pages/Main'
+import Settings from './pages/Settings'
+import AuthForm from './pages/AuthForm'
 export default class App extends React.Component{
   constructor(props){
     super(props);
@@ -19,17 +21,24 @@ export default class App extends React.Component{
     })
   }
 render(){
-  let content = switch(this.state.page) {
+  let content;
+  switch(this.state.page) {
     case 'main':
-      return <Main />;  
+      content =  <Main />;  
+      break;
     case 'settings':
-      return <Settings/>;
+      content =  <Settings/>;
+      break;
     case 'authForm':
-      return <AuthForm/>;
+      content =  <AuthForm/>;
+      break;
+
+    default: content = <AuthForm />;
+      break;
   }
   return (
     <div className='SPA__Motiv'>
-      
+      {content}
     </div>
 )}
 }

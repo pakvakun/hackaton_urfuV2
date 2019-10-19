@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 
 // import './button.css';
 
-export default class Button extends React.Component{
+export default class CustomButton extends React.Component{
   constructor(props){
     super(props);
     this.state = {
