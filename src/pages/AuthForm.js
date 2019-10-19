@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import CustomButton from '../components/button';
 import '../css/auth-form.css';
-import Axios from 'axios';
+// import Axios from 'axios';
 
 export default class AuthForm extends React.Component{
   constructor(props){

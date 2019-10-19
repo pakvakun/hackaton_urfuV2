@@ -1,0 +1,20 @@
+.wrap{
+  padding-top: 70px;
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+
+}
+.settings_for_item{
+  margin: 0 15px;
+  position: relative;
+  min-height: 100px;
+}
+.settings_for_item:hover{
+  cursor: pointer;
+}
+.settings_for_item .icon{
+  position: absolute;
+  bottom: 3px;
+  right: 10px;
+}

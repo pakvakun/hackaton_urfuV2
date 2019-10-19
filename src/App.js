@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/App.css';
-import Axios from 'axios';
+// import Axios from 'axios';
 import Main from './pages/Main'
 import Settings from './pages/Settings'
 import AuthForm from './pages/AuthForm'
@@ -8,7 +8,7 @@ export default class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      page: 'authForm',
+      page: 'settings',
       regField: '',
     }
   }
@@ -24,15 +24,14 @@ render(){
   let content;
   switch(this.state.page) {
     case 'main':
-      content =  <Main />;  
+      content =  <Main/>;  
       break;
     case 'settings':
-      content =  <Settings/>;
+      content =  <Settings clickHandler={this.onClickButton}/>;
       break;
     case 'authForm':
       content =  <AuthForm/>;
       break;
-
     default: content = <AuthForm />;
       break;
   }
