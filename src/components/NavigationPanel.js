@@ -26,9 +26,10 @@ render(){
         // style={{backgroundColor: '#000'}}
         action={(data) => this.data = data }
       >
-        <Tab icon={<PhoneIcon />} label="RECENTS" value={'main'}/>
-        <Tab icon={<FavoriteIcon />} label="FAVORITES" value={'settings'}/>
-        <Tab icon={<PersonPinIcon />} label="NEARBY" value={'authForm'}/>
+        <Tab icon={<PhoneIcon />} label="Главная" value={'main'}/>
+        <Tab icon={<FavoriteIcon />} label="Настройки" value={'settings'}/>
+        <Tab icon={<PersonPinIcon />} label="Войти" value={'authForm'}/>
+        <Tab icon={<PersonPinIcon />} label="Изменить пароль" value={'ChangePassword'}/>
       </Tabs>
     </Paper>
 )}
