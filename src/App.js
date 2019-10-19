@@ -3,6 +3,7 @@ import './css/App.css';
 // import Axios from 'axios';
 import Main from './pages/Main'
 import Settings from './pages/Settings'
+import ChangePassword from './pages/ChangePassword'
 import AuthForm from './pages/AuthForm'
 export default class App extends React.Component{
   constructor(props){
@@ -31,6 +32,9 @@ render(){
       break;
     case 'authForm':
       content =  <AuthForm/>;
+      break;
+    case 'ChangePassword':
+      content =  <ChangePassword/>;
       break;
     default: content = <AuthForm />;
       break;

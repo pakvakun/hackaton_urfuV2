@@ -67,22 +67,3 @@
   -webkit-animation-delay: 5s;
   animation-delay: 5s
 }
-.wrap{
-  padding: 70px 10% 0 10%;
-  height: 100%;
-  width: 100%;
-}
-.settings_for_item_paper{
-  border: 1.5px  #fa6600 solid;
-  margin: 0 15px;
-  position: relative;
-  min-height: 100px;
-}
-.settings_for_item:hover{
-  cursor: pointer !important;
-}
-.settings_for_item_paper .icon{
-  position: absolute !important;
-  bottom: 3px !important;
-  right: 10px !important;
-}
