@@ -42,7 +42,7 @@ render(){
           </div>
           </Paper>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={2} onClick={() => {this.props.clickHandler('authForm')}}>
           <Paper 
             className='settings_for_item'
             elevation={5}
@@ -53,7 +53,7 @@ render(){
           </div>
           </Paper>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={2} onClick={() => {this.props.clickHandler('authForm')}}>
           <Paper 
             className='settings_for_item'
             elevation={5}
