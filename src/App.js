@@ -1,5 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
+import Button from './components/button';
 import './App.css';
 
 export default class App extends React.Component{
@@ -13,10 +15,18 @@ export default class App extends React.Component{
   handleChange = () => {
     alert('asas')
   }
+  onClickButton = () => {
+    alert('button clicjed')
+  }
 render(){
   return (
     <div className='SPA__Motiv'>
-      <form className='registration_form' noValidate autoComplete="off">
+      <Paper 
+        className='registration_form'
+        elevation={5}
+        square={false}
+      >
+      <form  noValidate autoComplete="off">
         <TextField
           id="outlined-name"
           label="Телефон"
@@ -35,7 +45,9 @@ render(){
           margin="normal"
           variant="outlined"
         />
+        <Button buttonVal='Войти' onClickBtn={this.onClickButton}/>
       </form>
+      </Paper>
     </div>
 )}
 }
