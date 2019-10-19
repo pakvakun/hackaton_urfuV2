@@ -44,8 +44,8 @@ render(){
           </div>
           </Paper>
         </Grid>
-        <Grid classNan item xs={2} onClick={() => {this.props.clickHandler('Change_Password')}}
-        className='settings_for_item fadeInRight wow'data-wow-duration="1s" data-wow-delay="0.3s">
+        <Grid classNan item xs={2} onClick={() => {this.props.clickHandler('ChangePassword')}}
+        className='settings_for_item fadeInRight wow'data-wow-duration="1s" data-wow-delay="0.25s">
           <Paper 
             className='settings_for_item_paper'
             elevation={5}
@@ -60,7 +60,7 @@ render(){
           </Paper>
         </Grid>
         <Grid item xs={2} onClick={() => {this.props.clickHandler('authForm')}}
-        className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0.6s">
+        className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0.5s">
           <Paper 
             className='settings_for_item_paper'
             elevation={5}
