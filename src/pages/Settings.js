@@ -29,7 +29,7 @@ render(){
     <div className = 'wrap'>
       <Grid container 
       alignContent={'space-between'}>
-        <Grid classNan  item xs={2} onClick={() => {this.props.clickHandler('authForm')}}
+        <Grid classNan  item lg={2} md={4} onClick={() => {this.props.clickHandler('authForm')}}
         className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s" >
           <Paper 
             className='settings_for_item_paper'
@@ -46,7 +46,7 @@ render(){
           </div>
           </Paper>
         </Grid>
-        <Grid classNan item xs={2} onClick={() => {this.props.clickHandler('ChangePassword')}}
+        <Grid classNan item lg={2} md={4} onClick={() => {this.props.clickHandler('ChangePassword')}}
         className='settings_for_item fadeInRight wow'data-wow-duration="1s" data-wow-delay="0.25s">
           <Paper 
             className='settings_for_item_paper'
@@ -61,7 +61,7 @@ render(){
           </div>
           </Paper>
         </Grid>
-        <Grid item xs={2} onClick={() => {this.props.clickHandler('authForm')}}
+        <Grid item lg={2} md={4} onClick={() => {this.props.clickHandler('authForm')}}
         className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0.5s">
           <Paper 
             className='settings_for_item_paper'

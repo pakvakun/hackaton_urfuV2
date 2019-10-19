@@ -47,17 +47,17 @@ render(){
   
   let content;
   switch(this.state.page) {
-    // case 'main':
-      // content =  <Main/>;  
-      // break;
+    case 'main':
+      content = <Main/>;  
+      break;
     case 'settings':
-      content =  <Settings clickHandler={this.onClickButton}/>;
+      content = <Settings clickHandler={this.onClickButton}/>;
       break;
     // case 'authForm':
       // content =  <AuthForm/>;
       // break;
     case 'ChangePassword':
-      content =  <ChangePassword login={this.state.login} clickHandler={this.onClickButton}/>;
+      content = <ChangePassword login={this.state.login} clickHandler={this.onClickButton}/>;
       break;
     // default: content = <AuthForm handleChange = {this.handleChange}/>;
     //   break;
