@@ -1,8 +1,6 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import Paper from '@material-ui/core/Paper';
-import Button from './components/button';
-import './App.css';
+import './css/App.css';
+import Axios from 'axios';
 
 export default class App extends React.Component{
   constructor(props){
