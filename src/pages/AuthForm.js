@@ -29,21 +29,24 @@ render(){
         elevation={5}
         square={false}
       >
-      <form  noValidate autoComplete="off">
-        <CustomTextField 
-            label='Телефон' 
-            class='registration_form__field' 
-            val={this.state.regField} 
-            handleChange={this.handleChange} 
-        />
-        <CustomTextField 
-            label='Пароль' 
-            class='registration_form__field' 
-            val={this.state.regField} 
-            handleChange={this.handleChange} 
-        />
-        <CustomButton buttonVal='Войти' onClickBtn={this.onClickButton}/>
-      </form>
+        <form  noValidate autoComplete="off">
+          <CustomTextField 
+              label='Телефон' 
+              class='registration_form__field' 
+              val={this.state.regField} 
+              handleChange={this.handleChange} 
+          />
+          <CustomTextField 
+              label='Пароль' 
+              class='registration_form__field' 
+              val={this.state.regField} 
+              handleChange={this.handleChange} 
+          />
+          <div className='btn-group'>
+            <CustomButton className='button' buttonVal='Войти' onClickBtn={this.onClickButton}/>
+            <CustomButton className='button' buttonVal='Получить Пароль' onClickBtn={this.onClickButton}/>
+          </div>
+        </form>
       </Paper>
 )}
 }
