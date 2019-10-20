@@ -57,7 +57,11 @@ render(){
               square={false}
             >
               <h2>Тариф 1</h2>
-              <CustomButton buttonVal='Подробнее' className='btn' onClickBtn={this.onClickButton}/>
+              <div className='descr'>Описание тарифа</div>
+              <div className='button_wrap'>
+                <CustomButton buttonVal='Подробнее' className='btn' onClickBtn={this.onClickButton}/>
+                <CustomButton buttonVal='Преобрести' className='btn' onClickBtn={this.onClickButton}/>
+              </div>
             </Paper>
           </Grid>
           <Grid classNan  item xs={4}
@@ -68,7 +72,11 @@ render(){
               square={false}
             >
               <h2>Тариф 2</h2>
-              <CustomButton buttonVal='Подробнее' className='btn' onClickBtn={this.onClickButton}/>
+              <div className='descr'>Описание тарифа</div>
+              <div className='button_wrap'>
+                <CustomButton buttonVal='Подробнее' className='btn' onClickBtn={this.onClickButton}/>
+                <CustomButton buttonVal='Преобрести' className='btn' onClickBtn={this.onClickButton}/>
+              </div>
             </Paper>
           </Grid>
           <Grid classNan  item xs={4}
@@ -79,7 +87,11 @@ render(){
               square={false}
             >
               <h2>Тариф 3</h2>
-              <CustomButton buttonVal='Подробнее' className='btn' onClickBtn={this.onClickButton}/>
+              <div className='descr'>Описание тарифа</div>
+              <div className='button_wrap'>
+                <CustomButton buttonVal='Подробнее' className='btn' onClickBtn={this.onClickButton}/>
+                <CustomButton buttonVal='Преобрести' className='btn' onClickBtn={this.onClickButton}/>
+              </div>
             </Paper>
           </Grid>
       </Grid>
