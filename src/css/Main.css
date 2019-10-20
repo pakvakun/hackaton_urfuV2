@@ -93,10 +93,11 @@
 }
 .paper{
   border: 1px  #fa6600 solid;
+  padding: 0 15px;
 }
 .paper.top h2 {
   font-size: 23px;
-  text-align: center;
+  text-align: left;
 }
 .paper.fare{
   margin: 2rem;
