@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import '../css/Main.css';
 import CustomButton from '../components/button';
+import axios from '../modules/api';
 
 export default class Main extends React.Component{
   constructor(props){
@@ -17,10 +18,13 @@ export default class Main extends React.Component{
 
     }
   }
-  handleChange = (name,value) => { }
+  componentDidMount(){
+    axios.get('/api/phones/')
+      .then(res => {
+        console.log(res)
+      })
+  }
   onClickButton = () => {}
-
-  componentDidMount(){}
 render(){
   return (
     <div className = 'wrap'>
