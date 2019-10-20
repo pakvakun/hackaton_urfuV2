@@ -13,14 +13,14 @@ export default class Balance extends React.Component{
     this.state = {
       regField: '',
       fare: 'Тариф 2',
-      remaining_balance: '256',
+      remaining_balance: 0
     }
   }
   componentDidMount(){
     axios.get('/api/phones/')
     .then(res => {
-      console.log(res)
-    })
+
+    });
 
     setInterval(() => {
         this.setState({ date : new Date()})
@@ -57,8 +57,9 @@ render(){
               elevation={5}
               square={false}
             >
-              <h2>Автоплатеж</h2>
-              <div className='descr' style={{textAlign: 'left'}}>Настройте автоматическое пополнение счета с банковской карты</div>
+              
+              <h2>Тариф отличный</h2>
+              <div className='descr'>Описание тарифа</div>
               <div className='button_wrap'>
                 <CustomButton buttonVal='Подключить' className='btn' onClickBtn={()=>this.props.handleClickItem('404')}/>
               </div>

@@ -7,7 +7,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import axios from '../modules/api';
 import MotivLogo from '../assets/icons/logo_motiv';
 
-
 export default class Main extends React.Component{
   constructor(props){
     super(props);
@@ -16,10 +15,8 @@ export default class Main extends React.Component{
       regField: '',
       login: '',
       password: '',
-      remaining_balance: '256',
-      fare: 'Тариф 2',
-      features: [],
-    }
+fare: 'Тариф 2',
+      features: []    }
   }
   componentDidMount(){
     axios.get('/api/phones/')
