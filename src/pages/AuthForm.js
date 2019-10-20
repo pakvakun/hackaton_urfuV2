@@ -7,7 +7,6 @@ import axios from 'axios';
 
 export default class AuthForm extends React.Component{
   constructor(props){
-    console.log(props);
     super(props);
     this.state = {
       regField: '',

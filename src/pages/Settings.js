@@ -1,6 +1,7 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import '../css/settings_form.css';
+import MotivLogo from '../assets/icons/logo_motiv';
 import Grid from '@material-ui/core/Grid';
 
 export default class Settings extends React.Component{
@@ -23,8 +24,10 @@ export default class Settings extends React.Component{
 render(){
   return (
     <div className = 'wrap'>
+      
       <Grid container 
       alignContent={'space-between'}>
+        <MotivLogo/>
         <Grid classNan  item lg={2} md={4} onClick={() => {this.props.clickHandler('authForm')}}
         className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s" >
           <Paper 
