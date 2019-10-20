@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import CustomButton from '../components/button';
 import CustomTextField from '../components/textField';
 import '../css/auth-form.css';
-import axios from 'axios';
+import axios from '../modules/api';
 
 export default class AuthForm extends React.Component{
   constructor(props){
@@ -25,7 +25,7 @@ export default class AuthForm extends React.Component{
       password: this.state.password
     };
     this.props.loginUser(this.state.login)
-    axios.post('http://172.20.10.2/api/auth/', data )
+    axios.post('/api/auth/', data )
       .then(res => {
         console.log(res)
         if (res.data.type == 'success'){

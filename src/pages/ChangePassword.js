@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import CustomButton from '../components/button';
 import CustomTextField from '../components/textField';
 import '../css/settings_form.css';
-import axios from 'axios';
+import axios from '../modules/api';
 
 export default class ChangePassword extends React.Component{
   constructor(props){
@@ -28,11 +28,10 @@ export default class ChangePassword extends React.Component{
       npassword: this.state.npassword,
   };
   console.log(data)
-  axios.put('http://172.20.10.2/api/auth/', data )
+  axios.put('/api/auth/', data )
     .then(res => {
       console.log(res)
-      if (true){
-        // this.props.handleChange(true)
+      if (res.data.type == 'success'){
         this.props.clickHandler('main')
       }
     })
