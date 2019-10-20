@@ -14,14 +14,10 @@ export default class Main extends React.Component{
       regField: '',
       login: '',
       password: '',
-<<<<<<< HEAD
       remaining_balance: '',
-      fare: ''
-=======
-      remaining_balance: '256',
+      fare: '',
       fare: 'Тариф 2',
-      features: [],
->>>>>>> 0944e0221b7e79b015f003a1df9d61b835eb5c02
+      features: []
     }
   }
   componentDidMount(){
