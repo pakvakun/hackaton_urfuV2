@@ -17,7 +17,6 @@ export default class AuthForm extends React.Component{
   }
   handleChange = (name,value) => {  
     this.setState({[name]:value})
-    console.log(value)
   }
   onClickButton = () => {
     let data = {
@@ -27,7 +26,6 @@ export default class AuthForm extends React.Component{
     this.props.loginUser(this.state.login)
     axios.post('/api/auth/', data )
       .then(res => {
-        console.log(res)
         if (res.data.type == 'success'){
           this.props.handleChange(true)
         }

@@ -20,7 +20,9 @@ export default class Main extends React.Component{
   componentDidMount(){
     axios.get('/api/phones/')
       .then(res => {
-        console.log(res)
+        res.data.data.forEach(element => {
+          console.log(element)
+        });
       })
   }
   onClickButton = () => {}
