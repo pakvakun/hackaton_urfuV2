@@ -13,7 +13,7 @@ export default class App extends React.Component{
       page: 'main',
       regField: '',
       isAuth: false,
-      login: ''
+      login: '8805553535'
     }
   }
   loginUser = (login) =>{
@@ -48,8 +48,8 @@ render(){
   let content;
   switch(this.state.page) {
     case 'main':
-      content = <Main/>;  
-      break;
+      content = <Main login={this.state.login}/>;  
+      break; 
     case 'settings':
       content = <Settings clickHandler={this.onClickButton}/>;
       break;
@@ -63,10 +63,11 @@ render(){
     //   break;
   }
   return (
-    <div className='SPA__Motiv' style={{paddingTop: this.state.isAuth ? 80 : 0}}>
+    // <div className='SPA__Motiv' style={{paddingTop: this.state.isAuth ? 80 : 0}}>
+    <div className='SPA__Motiv' style={{paddingTop: true ? 80 : 0}}>
       {
-        this.state.isAuth
-        // true
+        // this.state.isAuth
+        true
         ?   <>
               <NavigationPanel handleClickMenuBar={this.handleClickMenuBar} menuValue={this.state.page}/>
               {content}

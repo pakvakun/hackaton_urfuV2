@@ -1,8 +1,8 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import '../css/Main.css';
 import CustomButton from '../components/button';
-import CustomTextField from '../components/textField';
-import '../css/auth-form.css';
 
 export default class Main extends React.Component{
   constructor(props){
@@ -12,6 +12,7 @@ export default class Main extends React.Component{
       regField: '',
       login: '',
       password: '',
+      remaining_balance: '256',
 
     }
   }
@@ -21,12 +22,67 @@ export default class Main extends React.Component{
   componentDidMount(){}
 render(){
   return (
-      <Paper 
-        className='registration_form'
-        elevation={5}
-        square={false}
-      >
-        <h2>Главная</h2>
-      </Paper>
+    <div className = 'wrap'>
+       <Grid container 
+      alignContent={'space-between'}>
+          <Grid classNan  item xs={6}
+              className='wrap_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s">
+            <Paper 
+              className='paper top'
+              elevation={5}
+              square={false}
+            >
+              <h2>Ваш номер: {this.props.login}</h2>
+            </Paper>
+          </Grid>
+          <Grid classNan  item xs={6}
+            className='wrap_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s">
+            <Paper 
+              className='paper top'
+              elevation={5}
+              square={false}
+            >
+              <h2>Остаток по счету: {this.state.remaining_balance} рублей</h2>
+            </Paper>
+          </Grid>
+          <Grid classNan  item xs={12}
+            className='wrap_item'>
+            <h2>Наши тарифы</h2>
+          </Grid>
+          <Grid classNan  item xs={4}
+            className='wrap_item fadeInLeft wow' data-wow-duration="1s" data-wow-delay="0s">
+            <Paper 
+              className='paper fare'
+              elevation={5}
+              square={false}
+            >
+              <h2>Тариф 1</h2>
+              <CustomButton buttonVal='Подробнее' className='btn' onClickBtn={this.onClickButton}/>
+            </Paper>
+          </Grid>
+          <Grid classNan  item xs={4}
+        className='wrap_item fadeInLeft wow' data-wow-duration="1s" data-wow-delay="0.25s">
+            <Paper 
+              className='paper fare'
+              elevation={5}
+              square={false}
+            >
+              <h2>Тариф 2</h2>
+              <CustomButton buttonVal='Подробнее' className='btn' onClickBtn={this.onClickButton}/>
+            </Paper>
+          </Grid>
+          <Grid classNan  item xs={4}
+        className='wrap_item fadeInLeft wow' data-wow-duration="1s" data-wow-delay="0.5s">
+            <Paper 
+              className='paper fare'
+              elevation={5}
+              square={false}
+            >
+              <h2>Тариф 3</h2>
+              <CustomButton buttonVal='Подробнее' className='btn' onClickBtn={this.onClickButton}/>
+            </Paper>
+          </Grid>
+      </Grid>
+    </div>
 )}
 }
