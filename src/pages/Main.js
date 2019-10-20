@@ -13,6 +13,7 @@ export default class Main extends React.Component{
       login: '',
       password: '',
       remaining_balance: '256',
+      fare: 'Тариф 2'
 
     }
   }
@@ -43,6 +44,16 @@ render(){
               square={false}
             >
               <h2>Остаток по счету: {this.state.remaining_balance} рублей</h2>
+            </Paper>
+          </Grid>
+          <Grid classNan item xs={10} 
+              className='wrap_item wrap_item_tarif fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s">
+            <Paper 
+              className='paper top'
+              elevation={5}
+              square={false}
+            >
+              <h2>У вас подключен тариф: {this.state.fare}</h2>
             </Paper>
           </Grid>
           <Grid classNan  item xs={12}

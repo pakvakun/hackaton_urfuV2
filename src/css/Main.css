@@ -133,3 +133,6 @@
   transform: translateX(-50%);
 
 }
+.wrap_item_tarif{
+  margin: 0 auto !important;
+}
