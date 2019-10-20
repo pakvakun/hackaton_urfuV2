@@ -40,10 +40,11 @@ export default class Main extends React.Component{
 render(){
   return (
     <div className = 'wrap'>
+      {/* <MotivLogo/> */}
        <Grid  container 
               alignItems="flex-end"
+              style={{zIndex: 1}}
             >
-        <MotivLogo/>
 
           <Grid classNan  item xs={6}
                 className='wrap_item m-1 fadeInRight wow' 
