@@ -6,6 +6,8 @@ import Settings from './pages/Settings';
 import AuthForm from './pages/AuthForm';
 import ChangePassword from './pages/ChangePassword';
 import NavigationPanel from './components/NavigationPanel';
+import Tarifes from './pages/tarifes';
+
 export default class App extends React.Component{
   constructor(props){
     super(props);
@@ -40,34 +42,30 @@ export default class App extends React.Component{
   }
   handleClickMenuBar = (event, value) => {
     this.setState({page: value})
-    console.log(value);
-    
   }
 render(){
+  console.log(this.state);
   
   let content;
   switch(this.state.page) {
     case 'main':
-      content = <Main login={this.state.login}/>;  
+      content = <Main login={this.state.login} handleClickItem={this.onClickButton}/>;  
       break; 
     case 'settings':
       content = <Settings clickHandler={this.onClickButton}/>;
       break;
-    // case 'authForm':
-      // content =  <AuthForm/>;
-      // break;
     case 'ChangePassword':
       content = <ChangePassword login={this.state.login} clickHandler={this.onClickButton}/>;
       break;
-    // default: content = <AuthForm handleChange = {this.handleChange}/>;
-    //   break;
+    case 'tarifes':
+      content = <Tarifes handleClickItem={this.onClickButton}/>;
+      break;
   }
   return (
     // <div className='SPA__Motiv' style={{paddingTop: this.state.isAuth ? 80 : 0}}>
-    <div className='SPA__Motiv' style={{paddingTop: true ? 80 : 0}}>
+    <div className='SPA__Motiv' style={{paddingTop: !this.state.isAuth ? 80 : 0}}>
       {
-        this.state.isAuth
-        // true
+        !this.state.isAuth
         ?   <>
               <NavigationPanel handleClickMenuBar={this.handleClickMenuBar} menuValue={this.state.page}/>
               {content}
