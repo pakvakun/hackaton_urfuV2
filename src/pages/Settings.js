@@ -28,7 +28,7 @@ render(){
       <Grid container 
       alignContent={'space-between'}>
         <MotivLogo/>
-        <Grid classNan  item lg={2} md={4} onClick={() => {this.props.clickHandler('authForm')}}
+        <Grid classNan  item lg={2} md={4} onClick={() => {this.props.clickHandler('404')}}
         className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0s" >
           <Paper 
             className='settings_for_item_paper'
@@ -60,7 +60,7 @@ render(){
           </div>
           </Paper>
         </Grid>
-        <Grid item lg={2} md={4} onClick={() => {this.props.clickHandler('authForm')}}
+        <Grid item lg={2} md={4} onClick={() => {this.props.clickHandler('404')}}
         className='settings_for_item fadeInRight wow' data-wow-duration="1s" data-wow-delay="0.5s">
           <Paper 
             className='settings_for_item_paper'

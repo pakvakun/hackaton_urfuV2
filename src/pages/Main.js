@@ -5,6 +5,7 @@ import '../css/Main.css';
 import CustomButton from '../components/button';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import axios from '../modules/api';
+import MotivLogo from '../assets/icons/logo_motiv';
 
 export default class Main extends React.Component{
   constructor(props){
@@ -14,11 +15,8 @@ export default class Main extends React.Component{
       regField: '',
       login: '',
       password: '',
-      remaining_balance: '',
-      fare: '',
-      fare: 'Тариф 2',
-      features: []
-    }
+fare: 'Тариф 2',
+      features: []    }
   }
   componentDidMount(){
     axios.get('/api/phones/')
@@ -42,6 +40,8 @@ render(){
        <Grid  container 
               alignItems="flex-end"
             >
+        <MotivLogo/>
+
           <Grid classNan  item xs={6}
                 className='wrap_item m-1 fadeInRight wow' 
                 data-wow-duration="1s" 
