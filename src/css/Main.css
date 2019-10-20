@@ -91,6 +91,11 @@
   height: calc(100vh - 100px);
   width: 100%;
 }
+.custom-wrap {
+  padding: 15px  0!important;
+  height: calc(100vh - 100px);
+  width: 100%;
+}
 .paper{
   border: 1px  #fa6600 solid;
   padding: 0 15px;

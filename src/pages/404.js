@@ -32,7 +32,7 @@ export default class FourOFour extends React.Component{
 render(){
   return (
     <div style={{fontSize: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        Пока не готово
+        Пока не готово :(
     </div>
 )}
 }
