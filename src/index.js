@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import  WOW from './WOW'
 
+new WOW().init();
 ReactDOM.render(<App />, document.getElementById('root'));
 
 

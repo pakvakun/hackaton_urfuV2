@@ -31,8 +31,9 @@ export default class ChangePassword extends React.Component{
   axios.put('http://172.20.10.2/api/auth/', data )
     .then(res => {
       console.log(res)
-      if (res.data.type == 'success'){
+      if (true){
         // this.props.handleChange(true)
+        this.props.clickHandler('main')
       }
     })
     
