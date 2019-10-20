@@ -58,7 +58,7 @@ render(){
             </Paper>
           </Grid>
           <Grid classNan  item xs={4}
-        className='wrap_item fadeInLeft wow' data-wow-duration="1s" data-wow-delay="0.5s">
+                className='wrap_item fadeInLeft wow' data-wow-duration="1s" data-wow-delay="0.5s">
             <Paper 
               className='paper fare'
               elevation={5}

@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import '../css/Main.css';
 import CustomButton from '../components/button';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import axios from '../modules/api';
 
 export default class Main extends React.Component{
@@ -30,7 +31,7 @@ render(){
             alignContent={'space-between'}
             >
           <Grid classNan  item xs={6}
-                className='wrap_item fadeInRight wow' 
+                className='wrap_item m-1 fadeInRight wow' 
                 data-wow-duration="1s" 
                 data-wow-delay="0s"
                 onClick={()=>this.props.handleClickItem('tarifes')}
@@ -42,11 +43,11 @@ render(){
             >
               <h2>Ваш номер: {this.props.login}</h2>
               <h2>У вас подключен тариф: {this.state.fare}</h2>
-              <label></label>
+              <p style={{margin: '0.5rem', display: 'flex', color: '#bfbebe'}}>Подробнее о тарифах <ChevronRightIcon/></p>
             </Paper>
           </Grid>
-          <Grid classNan  item xs={6}
-                className='wrap_item fadeInRight wow' 
+          <Grid classNan  item xs={5}
+                className='wrap_item m-1 fadeInRight wow' 
                 data-wow-duration="1s" 
                 data-wow-delay="0s" 
                 onClick={(e)=>this.props.handleClickItem('balance')}
@@ -57,7 +58,7 @@ render(){
               square={false}
             >
               <h2>Баланс: {this.state.remaining_balance} рублей</h2>
-              <label>управление балансом</label>
+              <p style={{margin: '0.5rem', display: 'flex', color: '#bfbebe'}}>управление балансом  <ChevronRightIcon/></p>
             </Paper>
           </Grid>
           {/* <Grid classNan item xs={10} 

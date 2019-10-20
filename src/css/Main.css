@@ -99,10 +99,13 @@
   text-align: center;
 }
 .paper.fare{
-  margin-left: 15px;
+  margin: 2rem;
   border: none;
   height: 300px;
   position: relative;
+  border: 1px  transparent solid;
+  transition: all ease .5s;
+
 }
 .paper.fare h2{
   text-align: center;
@@ -110,14 +113,17 @@
 
 }
 .paper.fare:hover{
-  border: 1px  #fa6600 solid;
+  border-color:  #fa6600;
+}
+.m-1 {
+  margin: 1rem!important;
 }
 .btn{
   width: 100%;
   display: block !important;
   text-align: center !important;
   font-size: 15px !important;
-  margin: 0 15px;
+  margin: 5px 15px!important;
 }
 .descr{
   padding: 30px 30px;
@@ -129,6 +135,7 @@
   bottom: 10%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   left: 50%;
   transform: translateX(-50%);
 
@@ -138,4 +145,9 @@
 }
 .wrap_item_tarif{
   margin: 0 auto !important;
+  
+}
+h2{
+  font-size: 38px;
+  line-height: 42px;
 }
