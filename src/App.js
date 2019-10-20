@@ -7,6 +7,8 @@ import AuthForm from './pages/AuthForm';
 import ChangePassword from './pages/ChangePassword';
 import NavigationPanel from './components/NavigationPanel';
 import Tarifes from './pages/tarifes';
+import Balance from './pages/balance';
+import FourOFour from './pages/404';
 
 export default class App extends React.Component{
   constructor(props){
@@ -59,6 +61,12 @@ render(){
       break;
     case 'tarifes':
       content = <Tarifes handleClickItem={this.onClickButton}/>;
+      break;
+    case 'balance':
+      content = <Balance handleClickItem={this.onClickButton}/>;
+      break;
+    case '404':
+      content = <FourOFour handleClickItem={this.onClickButton}/>;
       break;
   }
   return (
