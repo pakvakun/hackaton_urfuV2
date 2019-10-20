@@ -66,8 +66,8 @@ render(){
     // <div className='SPA__Motiv' style={{paddingTop: this.state.isAuth ? 80 : 0}}>
     <div className='SPA__Motiv' style={{paddingTop: true ? 80 : 0}}>
       {
-        // this.state.isAuth
-        true
+        this.state.isAuth
+        // true
         ?   <>
               <NavigationPanel handleClickMenuBar={this.handleClickMenuBar} menuValue={this.state.page}/>
               {content}

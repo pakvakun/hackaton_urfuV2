@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const config = {
-    baseURL: 'http://192.168.78.56:80',
+    baseURL: 'http://172.20.10.2',
     withCredentials: true,
     origin: 'http://localhost:3000'
 };
