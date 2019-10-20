@@ -13,16 +13,16 @@ export default class Main extends React.Component{
       regField: '',
       login: '',
       password: '',
-      remaining_balance: '256',
-      fare: 'Тариф 2'
+      remaining_balance: '',
+      fare: ''
     }
   }
   componentDidMount(){
     axios.get('/api/phones/')
       .then(res => {
-        res.data.data.forEach(element => {
-          console.log(element)
-        });
+            console.log(res.data.data[0])
+            this.setState({remaining_balance:res.data.data[0].residue?res.data.data[0].residue:0});
+            this.setState({fare:res.data.data[0].name});
       })
   }
   onClickButton = () => {}
