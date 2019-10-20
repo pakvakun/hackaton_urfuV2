@@ -19,7 +19,6 @@ export default class ChangePassword extends React.Component{
   }
   handleChange = (name,value) => {
     this.setState({[name]:value})
-    console.log(value)
   }
   onClickButton = () => { 
     let data = {
@@ -27,10 +26,8 @@ export default class ChangePassword extends React.Component{
       password: this.state.password,
       npassword: this.state.npassword,
   };
-  console.log(data)
   axios.put('/api/auth/', data )
     .then(res => {
-      console.log(res)
       if (res.data.type == 'success'){
         this.props.clickHandler('main')
       }
